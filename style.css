@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.top-bar {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff6f61;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.intro-text {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    max-width: 800px;
+    margin: -50px auto 0;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.intro-text h1 {
+    color: #ff6f61;
+    margin-bottom: 1rem;
+}
+
+/* Receitas em Alta */
+.em-alta {
+    padding: 2rem;
+    text-align: center;
+}
+
+.em-alta h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.receitas {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.receita-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.receita-card:hover {
+    transform: translateY(-5px);
+}
+
+.receita-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.receita-card h3 {
+    padding: 1rem 1rem 0;
+    color: #333;
+}
+
+.receita-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s;
+}
+
+.social-links img:hover {
+    opacity: 0.8;
+}
+
+.info p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .search {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .intro-text {
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    
+    .receitas {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .receita-card {
+        width: 90%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .intro-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .em-alta h2 {
+        font-size: 1.5rem;
+    }
+}
