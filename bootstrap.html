@@ -7,12 +7,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Ícones Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </head>
 <body>
     <header class="bg-white shadow-sm py-3">
         <div class="container">
             <div class="d-flex flex-wrap justify-content-between align-items-center">
-                <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
                     <img src="imagens/easyfoodslogo.png" alt="EasyFoods" height="50">
                 </a>
                 
@@ -26,7 +28,7 @@
                 <div class="d-flex ms-md-3">
                     <input class="form-control me-2" type="search" placeholder="Encontre receitas...">
                     <button class="btn btn-outline-danger" type="submit">
-                        <img src="imagens/lupa.png" alt="Buscar" width="20">
+                        <i class="bi bi-search"></i>
                     </button>
                 </div>
             </div>
@@ -35,8 +37,62 @@
 
     <main>
         <section class="hero position-relative mb-5">
-            <img src="imagens/pexels-yuuilina-copy.png" alt="Panquecas Doces" class="img-fluid w-100" style="max-height: 500px; object-fit: cover;">
+            <!-- Carrossel Bootstrap -->
+            <div id="receitasCarousel" class="carousel slide" data-bs-ride="carousel" style="max-height: 500px; overflow: hidden;">
+                <div class="carousel-inner">
+                    <!-- Item 1 - Salada -->
+                    <div class="carousel-item active">
+                        <a href="salada-completa.html">
+                            <img src="imagens/pexels-dana-tentis-118658-1213710.jpg" class="d-block w-100" alt="Salada Refrescante" style="height: 500px; object-fit: cover;">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3">
+                            <h3>Salada Completa</h3>
+                            <p>Salada refrescante, prática e saudável para seu almoço rápido!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 - Pizza -->
+                    <div class="carousel-item">
+                        <a href="pizza-caseira.html">
+                            <img src="imagens/pexels-pablo-macedo-287472-845802.jpg" class="d-block w-100" alt="Pizza Caseira" style="height: 500px; object-fit: cover;">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3">
+                            <h3>Pizza Caseira</h3>
+                            <p>Aprenda a fazer pizza em casa com massa simples e recheio criativo!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 - Smoothie -->
+                    <div class="carousel-item">
+                        <a href="smoothie-matinal.html">
+                            <img src="imagens/pexels-rajesh-tp-1624487.png" class="d-block w-100" alt="Smoothie Energético" style="height: 500px; object-fit: cover;">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3">
+                            <h3>Smoothie Matinal</h3>
+                            <p>Comece o dia com energia com esta receita rápida de smoothie!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles do Carrossel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#receitasCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#receitasCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+                
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#receitasCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#receitasCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#receitasCarousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
             
+            <!-- Texto de introdução -->
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 bg-white p-4 rounded-3 shadow position-relative" style="margin-top: -50px;">
@@ -53,9 +109,11 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm hover-shadow">
-                        <img src="imagens/pexels-dana-tentis-118658-1213710.jpg" class="card-img-top" alt="Salada Refrescante" style="height: 200px; object-fit: cover;">
+                        <a href="salada-completa.html">
+                            <img src="imagens/pexels-dana-tentis-118658-1213710.jpg" class="card-img-top" alt="Salada Refrescante" style="height: 200px; object-fit: cover;">
+                        </a>
                         <div class="card-body">
-                            <h3 class="card-title">Salada Completa</h3>
+                            <h3 class="card-title"><a href="salada-completa.html" class="text-decoration-none text-dark">Salada Completa</a></h3>
                             <p class="card-text">Salada refrescante, prática e saudável para seu almoço rápido!</p>
                         </div>
                     </div>
@@ -63,9 +121,11 @@
                 
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm hover-shadow">
-                        <img src="imagens/pexels-pablo-macedo-287472-845802.jpg" class="card-img-top" alt="Pizza Caseira" style="height: 200px; object-fit: cover;">
+                        <a href="pizza-caseira.html">
+                            <img src="imagens/pexels-pablo-macedo-287472-845802.jpg" class="card-img-top" alt="Pizza Caseira" style="height: 200px; object-fit: cover;">
+                        </a>
                         <div class="card-body">
-                            <h3 class="card-title">Pizza Caseira</h3>
+                            <h3 class="card-title"><a href="pizza-caseira.html" class="text-decoration-none text-dark">Pizza Caseira</a></h3>
                             <p class="card-text">Aprenda a fazer pizza em casa com massa simples e recheio criativo!</p>
                         </div>
                     </div>
@@ -73,9 +133,11 @@
                 
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm hover-shadow">
-                        <img src="imagens/pexels-rajesh-tp-1624487.png" class="card-img-top" alt="Smoothie Energético" style="height: 200px; object-fit: cover;">
+                        <a href="smoothie-matinal.html">
+                            <img src="imagens/pexels-rajesh-tp-1624487.png" class="card-img-top" alt="Smoothie Energético" style="height: 200px; object-fit: cover;">
+                        </a>
                         <div class="card-body">
-                            <h3 class="card-title">Smoothie Matinal</h3>
+                            <h3 class="card-title"><a href="smoothie-matinal.html" class="text-decoration-none text-dark">Smoothie Matinal</a></h3>
                             <p class="card-text">Comece o dia com energia com esta receita rápida de smoothie!</p>
                         </div>
                     </div>
@@ -88,9 +150,9 @@
         <div class="container">
             <div class="d-flex flex-wrap justify-content-between align-items-center">
                 <div class="d-flex gap-3 mb-3 mb-md-0">
-                    <a href="#" class="text-white"><img src="imagens/faceb.png" alt="Facebook" width="30"></a>
-                    <a href="#" class="text-white"><img src="imagens/insta.png" alt="Instagram" width="30"></a>
-                    <a href="#" class="text-white"><img src="imagens/yout.png" alt="YouTube" width="30"></a>
+                    <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
                 </div>
                 
                 <div class="text-center text-md-end">
