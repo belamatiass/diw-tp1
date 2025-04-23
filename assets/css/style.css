@@ -58,59 +58,45 @@ body {
     padding-bottom: 0.5rem;
 }
 
-/* Cards de ingredientes e preparo */
 .card-header {
     border-radius: var(--bs-border-radius) var(--bs-border-radius) 0 0 !important;
     background-color: var(--bs-primary) !important;
-    color: rgb(8, 1, 1) !important; 
 }
 
+/* Estilos para texto preto nos cards */
 .card-body {
-    color: #000; 
-    background-color: white; 
+    color: #000 !important;
 }
 
-.list-unstyled li {
-    color: #000; 
+.card-body ul, 
+.card-body ol {
+    color: #000;
 }
 
 .list-unstyled li:before {
-    content: "•";
-    color: var(--bs-primary); 
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-ol {
-    counter-reset: step-counter;
-    padding-left: 1.5rem;
-    color: #000; 
-}
-
-ol li {
-    counter-increment: step-counter;
-    margin-bottom: 1rem;
-    position: relative;
-    color: #000; 
+    color: var(--bs-primary);
 }
 
 ol li:before {
-    content: counter(step-counter);
     background-color: var(--bs-primary);
-    color: white; 
-    font-weight: bold;
-    border-radius: 50%;
-    width: 1.8rem;
-    height: 1.8rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: -2.2rem;
-    top: -0.2rem;
+    color: white;
 }
+
+/* Navbar */
+.nav-pills .nav-link.active {
+    background-color: var(--bs-primary);
+}
+
+/* Botões */
+.btn-outline-danger {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .carousel-caption {
@@ -135,6 +121,14 @@ ol li:before {
         width: 100%;
         margin-top: 1rem;
     }
+    
+    .receita-detalhada h1 {
+        font-size: 2rem;
+    }
+    
+    .d-flex.gap-5 {
+        gap: 2rem !important;
+    }
 }
 
 @media (max-width: 576px) {
@@ -143,6 +137,16 @@ ol li:before {
     }
     
     .receita-detalhada h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .d-flex.gap-5 {
+        gap: 1rem !important;
+        flex-wrap: wrap;
+    }
+    
+    .d-flex.gap-5 > div {
+        width: 45%;
+        margin-bottom: 1rem;
     }
 }
